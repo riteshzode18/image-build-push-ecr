@@ -11,4 +11,4 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-nginx-app:$(date +%s)
+      run: docker build . --file Dockerfile --tag my-nginx-app:${{ env.SHORT_SHA }}
